@@ -1,0 +1,23 @@
+{
+  "name": "a03-andymking",
+  "version": "0.1.0",
+  "description": "Build an API to flips some coins.",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js --port=5555"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2022-spring/a03-andymking.git"
+  },
+  "author": "Andrew M. King",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2022-spring/a03-andymking/issues"
+  },
+  "homepage": "https://github.com/comp426-2022-spring/a03-andymking#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "yargs": "^17.3.1"
+  }
+}
