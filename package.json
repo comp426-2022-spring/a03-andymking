@@ -18,6 +18,7 @@
   "homepage": "https://github.com/comp426-2022-spring/a03-andymking#readme",
   "dependencies": {
     "express": "^4.17.2",
+    "minimist": "^1.2.5",
     "yargs": "^17.3.1"
   }
 }
