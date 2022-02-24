@@ -59,7 +59,7 @@ app.get('/app/flip', (req, res) => {
     res.json({'flip' : flip})
 })
 
-app.get('/app/flip/:number', (req, res) => {
+app.get('/app/flips/:number', (req, res) => {
     res.setHeader('Content-Type', 'text/json');
     res.setHeader('status', 200);
     var flips = coinFlips(req.params.number)
@@ -80,6 +80,5 @@ app.get('/app/flip/call/tails', (req, res) => {
 
 app.use(function(req, res) {
     res.setHeader('Content-Type', 'text/plain');
-    res.setHeader('status', 404)
-    res.end("404 NOT FOUND")
+    res.status(404).send('404 Not Found')
 })
