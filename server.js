@@ -33,19 +33,19 @@ function countFlips(array) {
 }
 
 function flipACoin(call) {
-    let out = {call: '', flip: '', results: ''}
+    let out = {call: '', flip: '', result: ''}
     if (call != 'heads' && call != 'tails') {
       return 'Error: no input.\nUsage: node guess-flip --call=[heads|tails]';
     } else {
       let flip = coinFlip();
       let result = flip == call ? 'win' : 'lose';
-      out.call = call, out.flip = flip, out.results = result;
+      out.call = call, out.flip = flip, out.result = result;
       return out;
     }
 }
 
 const server = app.listen(port, () => {
-    // console.log('App is running on port %PORT%'.replace('%PORT%', port))
+    console.log('App is running on port %PORT%'.replace('%PORT%', port))
 })
 
 // // Log with morgan 
