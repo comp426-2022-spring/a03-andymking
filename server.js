@@ -48,19 +48,19 @@ const server = app.listen(port, () => {
     console.log('App is running on port %PORT%'.replace('%PORT%', port))
 })
 
-// Log with morgan 
-app.use(morgan('common'))
-// also if you're logging, in bash rush node server.js > ./access.log and output is stored in access.log
-app.use(fs.writeFile('./access.log', data, 
-    {flag: 'a'}, (err, req, res, next) => {
-        if (err) {
-            console.error(err)
-        } else {
-            console.log()
-        }
-    }
+// // Log with morgan 
+// app.use(morgan('common'))
+// // also if you're logging, in bash rush node server.js > ./access.log and output is stored in access.log
+// app.use(fs.writeFile('./access.log', data, 
+//     {flag: 'a'}, (err, req, res, next) => {
+//         if (err) {
+//             console.error(err)
+//         } else {
+//             console.log()
+//         }
+//     }
 
-))
+// ))
 
 
 app.get('/app', (req, res) => {
