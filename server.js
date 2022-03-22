@@ -44,9 +44,9 @@ function flipACoin(call) {
     }
 }
 
-// const server = app.listen(port, () => {
-//     console.log('App is running on port %PORT%'.replace('%PORT%', port))
-// })
+const server = app.listen(port, () => {
+    // console.log('App is running on port %PORT%'.replace('%PORT%', port))
+})
 
 // // Log with morgan 
 // app.use(morgan('common'))
