@@ -19,6 +19,7 @@
   "dependencies": {
     "express": "^4.17.2",
     "minimist": "^1.2.5",
+    "morgan": "^1.10.0",
     "yargs": "^17.3.1"
   }
 }

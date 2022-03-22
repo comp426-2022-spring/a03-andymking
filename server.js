@@ -1,7 +1,9 @@
 const minimist = require('minimist')
 const express = require('express')
 const app = express()
-const args = minimist(process.argv);
+const args = minimist(process.argv)
+const morgan = require('morgan')
+const fs = require('fs')
 
 var port = args['port'] ? args['port'] : 5000
 
@@ -45,6 +47,21 @@ function flipACoin(call) {
 const server = app.listen(port, () => {
     console.log('App is running on port %PORT%'.replace('%PORT%', port))
 })
+
+// Log with morgan 
+app.use(morgan('common'))
+// also if you're logging, in bash rush node server.js > ./access.log and output is stored in access.log
+app.use(fs.writeFile('./access.log', data, 
+    {flag: 'a'}, (err, req, res, next) => {
+        if (err) {
+            console.error(err)
+        } else {
+            console.log()
+        }
+    }
+
+))
+
 
 app.get('/app', (req, res) => {
     res.setHeader('Content-Type', 'text/plain');
